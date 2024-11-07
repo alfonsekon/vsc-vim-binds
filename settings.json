@@ -72,7 +72,7 @@
             ]
         }
     },
-    "editor.fontFamily": "fira code",
+    "editor.fontFamily": "monocraft",
     "editor.codeActionsOnSave": {},
     "editor.minimap.enabled": false,
     "workbench.settings.applyToAllProfiles": [
@@ -84,7 +84,6 @@
     ],
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": true,
-    "workbench.sideBar.location": "right",
     "vim.useSystemClipboard": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     
@@ -134,14 +133,11 @@
         "commands": ["editor.action.quickFix"]
         },
         { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+        { "before": ["leader", "p"], "commands": ["workbench.action.quickOpen"] },
         {
         "before": ["g", "h"],
         "commands": ["editor.action.showDefinitionPreviewHover"]
         },
-        { "before": ["leader", "e"], "commands": ["workbench.files.action.focusFilesExplorer"], "when": ["editorTextFocus"] },
-        { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
-        { "before": ["leader", ";"], "commands": ["workbench.action.togglePanel"]},
         {
         "before": ["<C-n>"],
         "commands": [":nohl"]
@@ -162,5 +158,21 @@
     "zenMode.hideLineNumbers": false,
     "zenMode.hideStatusBar": false,
     "zenMode.centerLayout": false,
-    "editor.fontSize": 15,
+    "window.zoomLevel": 0.9,
+    "editor.cursorStyle": "line",
+    "terminal.integrated.fontFamily": "monocraft",
+    "workbench.colorTheme": "Vim Dark Medium",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.lightbulb.enabled": "off",
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.sideBar.location": "right",
+    // "workbench.colorCustomizations": {
+    //     "statusBar.background": "#005f5f",
+    //     "statusBar.noFolderBackground": "#005f5f",
+    //     "statusBar.debuggingBackground": "#005f5f",
+    //     "statusBar.foreground": "#ffffff",
+    //     "statusBar.debuggingForeground": "#ffffff"
+    // },
 }
