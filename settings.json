@@ -139,9 +139,13 @@
         "before": ["g", "h"],
         "commands": ["editor.action.showDefinitionPreviewHover"]
         },
-        { "before": ["leader", "e"], "commands": ["workbench.files.action.focusFilesExplorer"] },
+        { "before": ["leader", "e"], "commands": ["workbench.files.action.focusFilesExplorer"], "when": ["editorTextFocus"] },
         { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
-        { "before": ["leader", ";"], "commands": ["workbench.action.togglePanel"]}
+        { "before": ["leader", ";"], "commands": ["workbench.action.togglePanel"]},
+        {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+        },
     ],
     "vim.visualModeKeyBindings": [
         // Stay in visual mode while indenting
@@ -159,5 +163,4 @@
     "zenMode.hideStatusBar": false,
     "zenMode.centerLayout": false,
     "editor.fontSize": 15,
-    "breadcrumbs.enabled": false,
 }
