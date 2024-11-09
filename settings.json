@@ -72,7 +72,7 @@
             ]
         }
     },
-    "editor.fontFamily": "monocraft",
+    "editor.fontFamily": "fira code",
     "editor.codeActionsOnSave": {},
     "editor.minimap.enabled": false,
     "workbench.settings.applyToAllProfiles": [
@@ -142,6 +142,10 @@
         "before": ["<C-n>"],
         "commands": [":nohl"]
         },
+        {
+        "before": ["<leader>", "\\"],
+        "commands": ["workbench.action.closeWindow"]
+        },
     ],
     "vim.visualModeKeyBindings": [
         // Stay in visual mode while indenting
@@ -153,6 +157,16 @@
         // toggle comment selection
         { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
     ],
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "vim.neovimConfigPath": "~/.local/bin/nvim",
+    // "vim.statusBarColorControl": false,
+    // "workbench.colorCustomizations": {
+    //     "statusBar.background": "#005f87",
+    //     "statusBar.noFolderBackground": "#005f87",
+    //     "statusBar.debuggingBackground": "#005f87",
+    //     "statusBar.foreground": "#ffffff",
+    //     "statusBar.debuggingForeground": "#ffffff"
+    // },
     "python.createEnvironment.trigger": "off",
     "database-client.autoSync": true,
     "zenMode.hideLineNumbers": false,
@@ -160,19 +174,11 @@
     "zenMode.centerLayout": false,
     "window.zoomLevel": 0.9,
     "editor.cursorStyle": "line",
-    "terminal.integrated.fontFamily": "monocraft",
+    "terminal.integrated.fontFamily": "fira code",
     "workbench.colorTheme": "Vim Dark Medium",
     "breadcrumbs.enabled": false,
     "editor.stickyScroll.enabled": false,
     "editor.lightbulb.enabled": "off",
-    "vim.mouseSelectionGoesIntoVisualMode": false,
     "workbench.activityBar.location": "hidden",
     "workbench.sideBar.location": "right",
-    // "workbench.colorCustomizations": {
-    //     "statusBar.background": "#005f5f",
-    //     "statusBar.noFolderBackground": "#005f5f",
-    //     "statusBar.debuggingBackground": "#005f5f",
-    //     "statusBar.foreground": "#ffffff",
-    //     "statusBar.debuggingForeground": "#ffffff"
-    // },
 }
