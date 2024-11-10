@@ -1,4 +1,6 @@
 {
+    "vim.commandLineModeKeyBindings": [],
+    "vim.useSystemClipboard": true,
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -44,7 +46,7 @@
         "before": ["<leader>", "c", "a"],
         "commands": ["editor.action.quickFix"]
         },
-        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "f"], "commands": ["search.action.focusSearchList"] },
         { "before": ["leader", "p"], "commands": ["workbench.action.quickOpen"] },
         {
         "before": ["g", "h"],
@@ -57,7 +59,7 @@
         {
         "before": ["<leader>", "\\"],
         "commands": ["workbench.action.closeWindow"]
-        }
+        },
     ],
     "vim.visualModeKeyBindings": [
         // Stay in visual mode while indenting
@@ -70,7 +72,7 @@
         { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
     ],
     "vim.mouseSelectionGoesIntoVisualMode": false,
-    "vim.neovimConfigPath": "~/.local/bin/nvim"
+    "vim.neovimConfigPath": "~/.local/bin/nvim",
     // "vim.statusBarColorControl": false,
     // "workbench.colorCustomizations": {
     //     "statusBar.background": "#005f87",

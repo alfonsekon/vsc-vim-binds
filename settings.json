@@ -78,15 +78,15 @@
     "workbench.settings.applyToAllProfiles": [
 
     ],
-    "vim.commandLineModeKeyBindings": [],
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": true,
-    "vim.useSystemClipboard": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     
+    "vim.commandLineModeKeyBindings": [],
+    "vim.useSystemClipboard": true,
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -132,7 +132,7 @@
         "before": ["<leader>", "c", "a"],
         "commands": ["editor.action.quickFix"]
         },
-        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "f"], "commands": ["search.action.focusSearchList"] },
         { "before": ["leader", "p"], "commands": ["workbench.action.quickOpen"] },
         {
         "before": ["g", "h"],
@@ -181,4 +181,10 @@
     "editor.lightbulb.enabled": "off",
     "workbench.activityBar.location": "hidden",
     "workbench.sideBar.location": "right",
+    "editor.fontLigatures": true,
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.wrapTabs": false,
+    "window.menuBarVisibility": "compact",
 }
