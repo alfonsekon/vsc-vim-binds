@@ -6,7 +6,6 @@
     },
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,
-    "python.analysis.typeCheckingMode": "basic",
     "python.analysis.diagnosticMode": "workspace",
     "cmake.configureOnOpen": true,
     "cmake.showOptionsMovedNotification": false,
@@ -85,6 +84,7 @@
     "julia.enableTelemetry": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     
+
     "vim.commandLineModeKeyBindings": [],
     "vim.useSystemClipboard": true,
     "vim.leader": "<Space>",
@@ -94,11 +94,9 @@
         // switch b/w buffers
         { "before": ["<S-h>"], "commands": [":bprevious"] },
         { "before": ["<S-l>"], "commands": [":bnext"] },
-
         // splits
         { "before": ["leader", "v"], "commands": [":vsplit"] },
         { "before": ["leader", "s"], "commands": [":split"] },
-
         // panes
         {
         "before": ["leader", "h"],
@@ -132,7 +130,9 @@
         "before": ["<leader>", "c", "a"],
         "commands": ["editor.action.quickFix"]
         },
-        { "before": ["leader", "f"], "commands": ["search.action.focusSearchList"] },
+        { "before": ["leader", "f"], "commands": ["workbench.action.findInFiles"] },
+        { "before": ["leader", "g"], "commands": ["workbench.action.replaceInFiles"] },
+        { "before": ["leader", "e"], "commands": ["workbench.files.action.focusFilesExplorer"] },
         { "before": ["leader", "p"], "commands": ["workbench.action.quickOpen"] },
         {
         "before": ["g", "h"],
@@ -167,6 +167,7 @@
     //     "statusBar.foreground": "#ffffff",
     //     "statusBar.debuggingForeground": "#ffffff"
     // },
+
     "python.createEnvironment.trigger": "off",
     "database-client.autoSync": true,
     "zenMode.hideLineNumbers": false,
@@ -186,5 +187,4 @@
     "window.commandCenter": false,
     "window.density.editorTabHeight": "compact",
     "workbench.editor.wrapTabs": false,
-    "window.menuBarVisibility": "compact",
 }
