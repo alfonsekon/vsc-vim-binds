@@ -198,4 +198,25 @@
     "key": "alt+'",
     "command": "workbench.action.toggleMenuBar"
   },
+  //leader key workaround in welcome screen or when no file is open
+  {
+    "key": "space e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "space f",
+    "command": "workbench.action.findInFiles",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "space p",
+    "command": "workbench.action.quickOpen",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.quickOpen",
+    "when": "!editorFocus && !inputFocus"
+  },
 ]

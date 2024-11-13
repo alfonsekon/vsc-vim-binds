@@ -170,9 +170,7 @@
 
     "python.createEnvironment.trigger": "off",
     "database-client.autoSync": true,
-    "zenMode.hideLineNumbers": false,
     "zenMode.hideStatusBar": false,
-    "zenMode.centerLayout": false,
     "window.zoomLevel": 0.9,
     "editor.cursorStyle": "line",
     "terminal.integrated.fontFamily": "fira code",
@@ -187,4 +185,6 @@
     "window.commandCenter": false,
     "window.density.editorTabHeight": "compact",
     "workbench.editor.wrapTabs": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.centerLayout": false,
 }
