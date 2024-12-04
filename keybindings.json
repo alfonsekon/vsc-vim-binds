@@ -56,12 +56,12 @@
   {
     "key": "j",
     "command": "list.focusDown",
-    "when": "listFocus && vim.mode == 'Normal'"
+    "when": "(listFocus && vim.mode != 'Normal') || (!editorFocus && !inputFocus)"
   },
   {
     "key": "k",
     "command": "list.focusUp",
-    "when": "listFocus && vim.mode == 'Normal'"
+    "when": "(listFocus && vim.mode != 'Normal') || (!editorFocus && !inputFocus)"
   },
   {
     "key": "ctrl+shift+h",
@@ -74,8 +74,8 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "renameFile",
     "key": "r",
+    "command": "renameFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
@@ -84,8 +84,8 @@
     "when": "explorerViewletFocus"
   },
   {
-    "command": "deleteFile",
     "key": "d",
+    "command": "deleteFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
   // EXTRA
@@ -102,16 +102,6 @@
     "command": "workbench.action.closeActiveEditor"
   },
   //LUIS 
-  {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.showHover",
@@ -198,7 +188,7 @@
     "key": "alt+'",
     "command": "workbench.action.toggleMenuBar"
   },
-  //leader key workaround in welcome screen or when no file is open
+  //================leader key workaround in welcome screen or when no file is open============//
   {
     "key": "space e",
     "command": "workbench.files.action.focusFilesExplorer",
@@ -219,4 +209,79 @@
     "command": "workbench.action.quickOpen",
     "when": "!editorFocus && !inputFocus"
   },
+  {
+    "key": "space b",
+    "command": "workbench.action.files.openFolder",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "space s f",
+    "command": "find-it-faster.findFiles",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "space r g",
+    "command": "find-it-faster.findWithinFiles",
+    "when": "!editorFocus && !inputFocus"
+  },
+  //========================================until here===========================================//
+  {
+    "key": "ctrl+alt+c", // Choose your own keybinding
+    "command": "workbench.action.openGlobalSettings",
+    "args": {
+      "query": "codeium.enableCodeLens"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "codeium.openChatView",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "-codeium.openChatView",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "-find-it-faster.findFiles"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "-cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "find-it-faster.findWithinFilesWithType"
+  },
+  {
+    "key": "ctrl+shift+alt+u",
+    "command": "-find-it-faster.findWithinFilesWithType"
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "-find-it-faster.findWithinFiles"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openLocalFile",
+    "when": "remoteFileDialogVisible"
+  }
 ]

@@ -1,9 +1,14 @@
 {
-    "editor.lineNumbers": "relative",
     "C_Cpp.default.compilerPath": "D:\\MinGW\\bin\\gcc.exe",
     "[python]": {
         "editor.formatOnType": true
     },
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.wordWrap": "off",
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,
     "python.analysis.diagnosticMode": "workspace",
@@ -71,7 +76,6 @@
             ]
         }
     },
-    "editor.fontFamily": "fira code",
     "editor.codeActionsOnSave": {},
     "editor.minimap.enabled": false,
     "workbench.settings.applyToAllProfiles": [
@@ -82,13 +86,21 @@
     ],
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": true,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    // "terminal.integrated.defaultProfile.windows": "Git Bash",
     
+    //stuff i (manually) put are here
+    //extensions needed: Vim (not Neovim), Vim Theme (optional, just a theme), finditfaster
 
+    "editor.lineNumbers": "relative",
     "vim.commandLineModeKeyBindings": [],
     "vim.useSystemClipboard": true,
     "vim.leader": "<Space>",
-    "vim.hlsearch": true,
+    "vim.hlsearch": false, 
+    "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+    },
+
     "vim.normalModeKeyBindingsNonRecursive": [
         // NAVIGATION
         // switch b/w buffers
@@ -96,7 +108,7 @@
         { "before": ["<S-l>"], "commands": [":bnext"] },
         // splits
         { "before": ["leader", "v"], "commands": [":vsplit"] },
-        { "before": ["leader", "s"], "commands": [":split"] },
+        { "before": ["leader", "s", "s"], "commands": [":split"] },
         // panes
         {
         "before": ["leader", "h"],
@@ -116,7 +128,7 @@
         },
         // NICE TO HAVE
         { "before": ["leader", "w"], "commands": [":w!"] },
-        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "q", "q"], "commands": [":q!"] }, //added another q since i keep fatfingering leader q and closing the window
         { "before": ["leader", "x"], "commands": [":x!"] },
         {
         "before": ["[", "d"],
@@ -130,10 +142,12 @@
         "before": ["<leader>", "c", "a"],
         "commands": ["editor.action.quickFix"]
         },
-        { "before": ["leader", "f"], "commands": ["workbench.action.findInFiles"] },
-        { "before": ["leader", "g"], "commands": ["workbench.action.replaceInFiles"] },
+        { "before": ["leader", "p"], "commands": ["workbench.action.findInFiles"] },
+        { "before": ["leader", "s", "h"], "commands": ["workbench.action.replaceInFiles"] },
         { "before": ["leader", "e"], "commands": ["workbench.files.action.focusFilesExplorer"] },
-        { "before": ["leader", "p"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "s", "f"], "commands": ["find-it-faster.findFiles"] },
+        { "before": ["leader", "r", "g"], "commands": ["find-it-faster.findWithinFiles"] },
+        { "before": ["leader", "b"], "commands": ["workbench.action.files.openFolder"] },
         {
         "before": ["g", "h"],
         "commands": ["editor.action.showDefinitionPreviewHover"]
@@ -170,21 +184,55 @@
 
     "python.createEnvironment.trigger": "off",
     "database-client.autoSync": true,
-    "zenMode.hideStatusBar": false,
     "window.zoomLevel": 0.9,
-    "editor.cursorStyle": "line",
-    "terminal.integrated.fontFamily": "fira code",
-    "workbench.colorTheme": "Vim Dark Medium",
-    "breadcrumbs.enabled": false,
-    "editor.stickyScroll.enabled": false,
-    "editor.lightbulb.enabled": "off",
-    "workbench.activityBar.location": "hidden",
-    "workbench.sideBar.location": "right",
-    "editor.fontLigatures": true,
-    "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
     "window.density.editorTabHeight": "compact",
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "Fira Code",
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 1,
+    "editor.lightbulb.enabled": "off",
+    "editor.cursorSurroundingLines": 8,
     "workbench.editor.wrapTabs": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.layoutControl.enabled": false,
+    "workbench.colorTheme": "Black",
+    "zenMode.hideStatusBar": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.centerLayout": false,
+    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.allowChords": false,
+    "python.analysis.typeCheckingMode": "standard",
+    "codeium.enableCodeLens": false,
+    "codeium.enableConfig": {
+        "*": true
+    },
+    //must be running on linux to use
+    "find-it-faster.general.useTerminalInEditor": true,
+    "find-it-faster.general.killTerminalAfterUse": true,
+    "find-it-faster.general.batTheme": "Coldark-Dark",
+    "security.workspace.trust.untrustedFiles": "open",
+    "find-it-faster.general.restoreFocusTerminal": true,
+    "codeium.disableSupercomplete": true,
+    "screencastMode.fontSize": 20,
+    "screencastMode.keyboardOptions": {
+        "showCommands": false
+    },
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.replace": "block",
+    "vim.cursorStylePerMode.normal": "block",
+    "window.menuBarVisibility": "compact",
+    //when in wsl
+    // "vim.neovimPath": "/usr/bin/nvim", 
+    //when in windows
+    "vim.neovimPath": "nvim",
+    "vim.enableNeovim": true,
+    "breadcrumbs.enabled": false,
+    "find-it-faster.advanced.disableStartupChecks": true,
+    // "find-it-faster.findWithinFiles.previewWindowConfig": "top,80%,border-bottom,+{2}+3/3,~3",
+    // "find-it-faster.findFiles.previewWindowConfig": "top,50%",
 }
