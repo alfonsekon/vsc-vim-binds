@@ -192,18 +192,17 @@
     "editor.stickyScroll.enabled": true,
     "editor.stickyScroll.maxLineCount": 1,
     "editor.lightbulb.enabled": "off",
-    "editor.cursorSurroundingLines": 8,
+    "editor.cursorSurroundingLines": 12,
     "workbench.editor.wrapTabs": false,
     "workbench.activityBar.location": "hidden",
     "workbench.sideBar.location": "right",
     "workbench.layoutControl.enabled": false,
-    "workbench.colorTheme": "Black",
+    "workbench.colorTheme": "Vim Deep Dark",
     "zenMode.hideStatusBar": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.centerLayout": false,
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.allowChords": false,
-    "python.analysis.typeCheckingMode": "standard",
     "codeium.enableCodeLens": false,
     "codeium.enableConfig": {
         "*": true
@@ -233,6 +232,7 @@
     "vim.enableNeovim": true,
     "breadcrumbs.enabled": false,
     "find-it-faster.advanced.disableStartupChecks": true,
+    "python.defaultInterpreterPath": "C:\\Users\\Luis\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\pygame-client-hPVMhoM5-py3.13",
     // "find-it-faster.findWithinFiles.previewWindowConfig": "top,80%,border-bottom,+{2}+3/3,~3",
     // "find-it-faster.findFiles.previewWindowConfig": "top,50%",
 }
